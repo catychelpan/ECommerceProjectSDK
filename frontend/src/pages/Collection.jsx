@@ -95,9 +95,8 @@ const Collection = () => {
         <div className={`border border-gray-300 pl-5 py-3 mt-6 ${showFilter ? '' : 'hidden'} sm:block`}>
           <p className='mb-3 text-sm font-medium'>CATEGORIES</p>
           <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
-            <p className='flex gap-2'><input className='w-3' value={"Men"} onChange={toggleCategory} type="checkbox" /> Men </p>
-            <p className='flex gap-2'><input className='w-3' value={"Women"} onChange={toggleCategory} type="checkbox" /> Women </p>
-            <p className='flex gap-2'><input className='w-3' value={"Kids"} onChange={toggleCategory} type="checkbox" /> Kids </p>
+            <p className='flex gap-2'><input className='w-3' value={"Fiction"} onChange={toggleCategory} type="checkbox" /> Fiction </p>
+            <p className='flex gap-2'><input className='w-3' value={"Non-Fiction"} onChange={toggleCategory} type="checkbox" /> Non-Fiction </p>
           </div>
         </div>
 
@@ -105,9 +104,17 @@ const Collection = () => {
         <div className={`border border-gray-300 pl-5 py-3 my-5 ${showFilter ? '' : 'hidden'} sm:block`}>
           <p className='mb-3 text-sm font-medium'>TYPE</p>
           <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
-            <p className='flex gap-2'><input className='w-3' value={"Topwear"} onChange={toggleSubCategory} type="checkbox" /> Topwear </p>
-            <p className='flex gap-2'><input className='w-3' value={"Bottomwear"} onChange={toggleSubCategory} type="checkbox" /> Bottomwear </p>
-            <p className='flex gap-2'><input className='w-3' value={"Winterwear"} onChange={toggleSubCategory} type="checkbox" /> Winterwear </p>
+            <p className='flex gap-2'><input className='w-3' value={"Art"} onChange={toggleSubCategory} type="checkbox" /> Art </p>
+            <p className='flex gap-2'><input className='w-3' value={"Contemporary"} onChange={toggleSubCategory} type="checkbox" /> Contemporary </p>
+            <p className='flex gap-2'><input className='w-3' value={"Dystopia"} onChange={toggleSubCategory} type="checkbox" /> Dystopia </p>
+            <p className='flex gap-2'><input className='w-3' value={"Fantasy"} onChange={toggleSubCategory} type="checkbox" /> Fantasy </p>
+            <p className='flex gap-2'><input className='w-3' value={"History"} onChange={toggleSubCategory} type="checkbox" /> History </p>
+            <p className='flex gap-2'><input className='w-3' value={"Historical Fiction"} onChange={toggleSubCategory} type="checkbox" /> Historical Fiction </p>
+            <p className='flex gap-2'><input className='w-3' value={"Magical Realism"} onChange={toggleSubCategory} type="checkbox" /> Magical Realism </p>
+            <p className='flex gap-2'><input className='w-3' value={"Mental Health"} onChange={toggleSubCategory} type="checkbox" /> Mental Health </p>
+            <p className='flex gap-2'><input className='w-3' value={"Philosophy"} onChange={toggleSubCategory} type="checkbox" /> Philosophy </p>
+            <p className='flex gap-2'><input className='w-3' value={"Thriller"} onChange={toggleSubCategory} type="checkbox" /> Thriller </p>
+            <p className='flex gap-2'><input className='w-3' value={"Feminism"} onChange={toggleSubCategory} type="checkbox" /> Feminism </p>
           </div>
 
         </div>
@@ -131,7 +138,7 @@ const Collection = () => {
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6'>
           {
             filterProducts.map((item, index) => (
-              <ProductItem key={index} id={item._id} image={item.image} name={item.name} price={item.price} />
+              <ProductItem key={index} id={item._id} image={item.image} name={item.name} author={item.author} price={item.price} />
             ))
           }
         </div>
