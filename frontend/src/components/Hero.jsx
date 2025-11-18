@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ShopContext } from '../context/ShopContext'
 import { assets } from '../assets/assets'
 
+
 const Hero = () => {
+    const { navigate } = useContext(ShopContext);
+
     return (
         <div className='flex flex-col sm:flex-row border border-gray-400'>
 
@@ -16,7 +20,7 @@ const Hero = () => {
                     <h1 className='prata-regular text-3xl sm:py-3 lg:text-5xl leading-relaxed'>Latest Arrivals</h1>
 
                     <div className='flex items-center gap-2'>
-                        <p className='font-semibold text-sm md:text-base'>SHOP NOW</p>
+                        <button onClick={() => navigate('/collection')} className='border border-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500'>SHOP NOW</button>
                         <p className='w-8 md:w-11 h-[1px] bg-[#414141]'></p>
                     </div>
                 </div>
