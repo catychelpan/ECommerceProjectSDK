@@ -15,8 +15,8 @@ const Add = ({token}) => {
    const [author, setAuthor] = useState("");
    const [description, setDescription] = useState("");
    const [price, setPrice] = useState("");
-   const [category, setCategory] = useState("Men");
-   const [subCategory, setSubCategory] = useState("Topwear");
+   const [category, setCategory] = useState("Fiction");
+   const [subCategory, setSubCategory] = useState("Art");
    const [bestseller, setBestseller] = useState(false);
    const [sizes, setSizes] = useState([]);
 
@@ -107,7 +107,7 @@ const Add = ({token}) => {
 
             <div>
               <p className='mb-2'>Book category</p>
-              <select onChange={(e) => setCategory(e.target.value)} className='w-full px-3 py-2'>
+              <select onChange={(e) => setCategory(e.target.value)} value={category} className='w-full px-3 py-2'>
                   <option value="Fiction">Fiction</option>
                   <option value="Non-Fiction">Non-Fiction</option>
               </select>
@@ -115,7 +115,7 @@ const Add = ({token}) => {
 
             <div>
               <p className='mb-2'>Sub category</p>
-              <select onChange={(e) => setSubCategory(e.target.value)} className='w-full px-3 py-2'>
+              <select onChange={(e) => setSubCategory(e.target.value)} value={subCategory} className='w-full px-3 py-2'>
                   <option value="Art">Art</option>
                   <option value="Contemporary">Contemporary</option>
                   <option value="Dystopia">Dystopia</option>
